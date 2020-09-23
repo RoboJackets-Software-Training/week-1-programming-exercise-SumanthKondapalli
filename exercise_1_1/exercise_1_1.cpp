@@ -63,7 +63,7 @@ int main() {
 
         for (int i = 0; i < wheel_speeds.size(); i++) {
 
-            std::cout << "Wheel at index " << i << " has speed: " << wheel_speeds[i] << std::endl;
+            std::cout << "wheel at index " << i << " has speed: " << wheel_speeds[i] << std::endl;
 
         }
 
