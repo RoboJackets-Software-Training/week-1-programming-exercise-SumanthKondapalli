@@ -46,11 +46,11 @@ int main() {
 
   		int index = i + j - 1;
 
-  		if (index < 0 && pack_with_zeros)
+  		if (!pack_with_zeros && index < 0)
   		{
   			conSum += x[0] * w[j];
   		}
-  		else if (index >= x.size() && pack_with_zeros)
+  		else if (!pack_with_zeros && index >= x.size())
   		{
   			conSum += x[x.size()-1] * w[j];
   		}
