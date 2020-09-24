@@ -37,12 +37,45 @@ int main() {
 
   // TODO write your code here
   // =========== START =========
+  for (int i = 0; i < x.size(); i++) 
+  {
 
+  	int conSum = 0;
 
+  	for (int j = 0; j < w.size(); j++) {
+
+  		int index = i + j - 1;
+
+  		if (index < 0 && pack_with_zeros)
+  		{
+  			conSum += x[0] * w[j];
+  		}
+  		else if (index >= x.size() && pack_with_zeros)
+  		{
+  			conSum += x[x.size()-1] * w[j];
+  		}
+  		else {
+  			conSum += x[index] * w[j];
+  		}
+
+  	}
+
+  	y.push_back(conSum);
+
+  }
+
+  //output
+
+  std::cout << "{";
+
+  for (int i = 0; i < y.size() - 1; i++)
+  {
+  	std::cout << y[i] << ", ";
+  }
+
+  std::cout << y[y.size()-1] << "}" << std::endl;
 
 
   // =========== END ===========
-
-  return 0;
 }
 
