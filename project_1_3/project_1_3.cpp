@@ -37,6 +37,25 @@ int main() {
 
   // TODO write your code here
   // =========== START =========
+
+  std::cout << "x: {";
+
+  for (int i = 0; i < x.size() - 1; i++)
+  {
+  	std::cout << x[i] << ", ";
+  }
+
+  std::cout << x[x.size()-1] << "}" << std::endl;
+
+  std::cout << "w: {";
+
+  for (int i = 0; i < w.size() - 1; i++)
+  {
+  	std::cout << w[i] << ", ";
+  }
+
+  std::cout << w[w.size()-1] << "}" << std::endl;
+
   for (int i = 0; i < x.size(); i++) 
   {
 
@@ -44,7 +63,7 @@ int main() {
 
   	for (int j = 0; j < w.size(); j++) {
 
-  		int index = i + j - 1;
+  		int index = i + j - (w.size()/2);
 
   		if (!pack_with_zeros && index < 0)
   		{
@@ -66,7 +85,7 @@ int main() {
 
   //output
 
-  std::cout << "{";
+  std::cout << "y: {";
 
   for (int i = 0; i < y.size() - 1; i++)
   {
