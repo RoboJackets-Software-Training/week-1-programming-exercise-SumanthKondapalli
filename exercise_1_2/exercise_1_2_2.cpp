@@ -11,6 +11,18 @@ int main()
 
     // Palindrome Check
     // WRITE YOUR PALINDROME CHECK HERE
+    std::string reverseString;
+    for (int i = str.size() - 1; i >= 0; i--)
+    {
+    	reverseString.push_back(str[i]);
+    }
 
-    return 0;
+    if (str == reverseString)
+    {
+    	std::cout << str << " is a palindrome" << std::endl;
+    }
+    else
+    {
+    	std::cout << str << " is NOT a palindrome" << std::endl;
+    }
 }
