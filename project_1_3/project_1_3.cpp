@@ -85,7 +85,7 @@ int main() {
 
   //output
 
-  std::cout << "y: {";
+  std::cout << "{";
 
   for (int i = 0; i < y.size() - 1; i++)
   {
