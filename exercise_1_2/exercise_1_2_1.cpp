@@ -24,6 +24,12 @@ int main()
 
     // Reverse Vector
     // WRITE YOUR VECTOR REVERSAL HERE
+    std::vector<int> reverseList;
+    for (int i = list.size() - 1; i >= 0; i--)
+    {
+    	reverseList.push_back(list[i]);
+    }
+    list = reverseList;
 
     // Print the Reversed vector
     std::cout << "Reversed Vector: ";

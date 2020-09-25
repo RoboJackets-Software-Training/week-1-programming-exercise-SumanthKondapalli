@@ -38,11 +38,63 @@ int main() {
   // TODO write your code here
   // =========== START =========
 
+  std::cout << "x: {";
 
+  for (int i = 0; i < x.size() - 1; i++)
+  {
+  	std::cout << x[i] << ", ";
+  }
+
+  std::cout << x[x.size()-1] << "}" << std::endl;
+
+  std::cout << "w: {";
+
+  for (int i = 0; i < w.size() - 1; i++)
+  {
+  	std::cout << w[i] << ", ";
+  }
+
+  std::cout << w[w.size()-1] << "}" << std::endl;
+
+  for (int i = 0; i < x.size(); i++) 
+  {
+
+  	int conSum = 0;
+
+  	for (int j = 0; j < w.size(); j++) {
+
+  		int index = i + j - (w.size()/2);
+
+  		if (!pack_with_zeros && index < 0)
+  		{
+  			conSum += x[0] * w[j];
+  		}
+  		else if (!pack_with_zeros && index >= x.size())
+  		{
+  			conSum += x[x.size()-1] * w[j];
+  		}
+  		else {
+  			conSum += x[index] * w[j];
+  		}
+
+  	}
+
+  	y.push_back(conSum);
+
+  }
+
+  //output
+
+  std::cout << "{";
+
+  for (int i = 0; i < y.size() - 1; i++)
+  {
+  	std::cout << y[i] << ", ";
+  }
+
+  std::cout << y[y.size()-1] << "}" << std::endl;
 
 
   // =========== END ===========
-
-  return 0;
 }
 
